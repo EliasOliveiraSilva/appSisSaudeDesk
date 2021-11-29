@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/solicitaVisita/nova" method="post">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Observações</span>
+                </div>
+                <textarea class="form-control" id="observacao" name="observacao"></textarea>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="status">Status</label>
+                </div>
+                <select class="custom-select" id="status" name="status">
+                    <option selected>Selecione...</option>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Cumprido">Cumprido</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="usuario">Usuário</label>
+                </div>
+                <select class="custom-select" id="usuario" name="usuario">
+                    <option selected>Selecione...</option>
+                    <option value="Elias Oliveira e Silva">Elias Oliveira e Silva</option>
+                    <option value="Angela Regina Silva de Oliveira">Angela Regina Silva de Oliveira</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Adicinar solicitação de visita</button>
+        </form>
+    </div>
+</div>

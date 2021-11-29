@@ -1,0 +1,22 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+<h3>Editar medicamento</h3>
+
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/medicamentos/edit" method="post">
+            <input type="hidden" name="id" value="{{medicamentos._id}}"
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" placeholder="Nome do medicamento" class="form-control" value="{{medicamentos.nome}}" />
+
+            <label for="nomeGenerico">Nome Generico: </label>
+            <input type="text" id="nomeGenerico" name="nomeGenerico" placeholder="Nome generico do medicamento"
+                class="form-control" value="{{medicamentos.nomeGenerico}}"/>
+            <br/>
+            <button class="btn btn-success" type="submit">Editar</button>
+        </form>
+    </div>
+</div>

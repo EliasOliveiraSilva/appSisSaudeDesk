@@ -1,0 +1,35 @@
+<h3>Nova solicitação de medicamento</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/solicitacaoMedicamento/nova" method="post">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="medicamento">Medicamento</label>
+                </div>
+                <select class="custom-select" id="medicamento" name="medicamento">
+                    <option selected>Selecione...</option>
+                    {{#each medicamentos}}
+                    <option value="{{_id}}">{{nome}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Observações</span>
+                </div>
+                <textarea class="form-control" id="observacao" name="observacao"></textarea>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="status">Status</label>
+                </div>
+                <select class="custom-select" id="status" name="status">
+                    <option selected>Selecione...</option>
+                    <option value="Pendente">Pendente</option>
+                    <option value="Cumprido">Cumprido</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Adicinar medicamento</button>
+        </form>
+    </div>
+</div>

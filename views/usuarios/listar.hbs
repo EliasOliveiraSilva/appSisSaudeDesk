@@ -1,0 +1,20 @@
+<h2>Lista de Usuários</h2>
+<hr/>
+<a href="/usuarios/registro"><button class="btn btn-success">Adicionar novo Usuário</button></a>
+<hr/>
+{{#each usuarios}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>Nome: {{nome}}</h4>
+            <small><strong>Perfil: </strong>{{perfil}}</small>
+            <br/>
+            <a href="/usuarios/edit/{{_id}}"><button class="btn btn-success mt-2">Editar usuário</button></a>
+            <form action="/usuarios/deletar" method="post">
+                <input type="hidden" name="id" value="{{_id}}" />
+                <button class="btn btn-danger mt-2">Excluir usuário</button>
+            </form>
+        </div>
+    </div>
+{{else}}
+    <h4 class="mt-3">Nenhum usuário registrado</h4>
+{{/each}}
